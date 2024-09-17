@@ -1,4 +1,5 @@
 'use client'
+
 import { Bars3Icon, ChevronDownIcon, XMarkIcon } from '@heroicons/react/16/solid'
 import './styles.scss'
 import Image from 'next/image'

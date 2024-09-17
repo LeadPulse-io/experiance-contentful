@@ -1,13 +1,22 @@
+// src/registeredComponents.ts
+
 import { defineComponents } from '@contentful/experiences-sdk-react'
-import NavBar from '@/components/navbar'
+import { Button } from '../components/btn'
 
 defineComponents([
-  // {
-  //   component: NavBar,
-  //   definition: {
-  //     id: 'navbar',
-  //     name: 'NavBar',
-  //     category: 'Custom Components'
-  //   }
-  // }
+  {
+    component: Button,
+    definition: {
+      id: 'button',
+      name: 'Button',
+      category: 'Custom Components',
+      variables: {
+        text: {
+          displayName: 'Text',
+          type: 'Text',
+          defaultValue: 'Click me!'
+        }
+      }
+    }
+  }
 ])
