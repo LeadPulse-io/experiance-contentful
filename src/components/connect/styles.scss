@@ -1,0 +1,120 @@
+@use '@/styles' as *;
+.connect_block {
+  display: flex;
+  flex-flow: wrap;
+  width: 100%;
+  border-radius: 5px;
+  padding: 8% 15%;
+  background-color: var(--accent);
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  align-items: flex-start;
+  max-width: var(--maxwidth);
+
+  &:hover::before {
+    transform: rotate(-2deg);
+    transform-origin: center;
+  }
+  &::before {
+    content: '';
+    top: 0;
+    display: block;
+    position: absolute;
+    display: flex;
+    width: 110%;
+    height: 110%;
+    background-image: url('/connect_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    transition: ease-in-out 250ms;
+  }
+  @include respond(ultra-wide) {
+    padding: 120px;
+  }
+  @include respond(tab-land) {
+    padding: 15% 16px 8% 16px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h3 {
+    color: var(--white, #fff);
+    text-align: center;
+    font-family: 'Sora';
+
+    font-style: normal;
+    font-weight: 400;
+
+    padding-bottom: 25px;
+    @include h1;
+    @include respond(tab-land) {
+      padding-bottom: 10px;
+    }
+  }
+  p {
+    width: 100%;
+    color: #000;
+    text-align: center;
+    font-family: 'Inter';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 32px;
+    padding-bottom: 25px;
+    @include respond(tab-land) {
+      font-size: 20px;
+      line-height: 32px;
+      padding-bottom: 120px;
+    }
+  }
+  .btn {
+    text-decoration: none;
+    background-color: var(--black);
+    border-radius: 4px;
+    display: flex;
+    padding: 13px 18px 13px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    color: var(--white);
+    font-family: 'Inter';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    margin: 0 4px;
+    z-index: 2;
+    transition: ease-in-out 200ms;
+    &:hover {
+      background-color: var(--white);
+      color: var(--black);
+    }
+    &:hover svg {
+      color: var(--black);
+    }
+    svg {
+      color: var(--white);
+    }
+    @include respond(tab-land) {
+      width: auto;
+      margin: 0 0px 20px 0;
+    }
+  }
+  .btn_white {
+    background-color: var(--white);
+    color: var(--black);
+    transition: ease-in-out 300ms;
+    &:hover {
+      background-color: var(--black);
+      color: var(--white);
+    }
+    &:hover svg {
+      color: var(--accent);
+    }
+    svg {
+      color: var(--accent);
+    }
+  }
+}

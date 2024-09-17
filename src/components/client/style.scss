@@ -1,0 +1,122 @@
+@use '@/styles' as *;
+
+@keyframes marquee {
+  0% {
+    transform: translate(0%);
+  }
+
+  100% {
+    transform: translate(-100%);
+  }
+}
+.clients_wrap {
+  width: 100%;
+
+  display: flex;
+  flex-flow: wrap;
+  background-color: var(--black);
+  padding: 64px 0px 64px 0px;
+  position: relative;
+  overflow: hidden;
+  @include respond(tab-land) {
+    padding: 15% 16px;
+  }
+  background-color: var(--black);
+  @include respond(tab-port) {
+    padding: 15% 0px;
+  }
+  .client_heading {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 48px;
+    padding: 0 28%;
+
+    @include respond(tab-land) {
+      padding: 0 6%;
+      margin-bottom: 24px;
+    }
+
+    .left_arrow,
+    .right_arrow {
+      transition: transform 0.3s ease-in-out;
+    }
+    &:hover {
+      .left_arrow {
+        transform: translateX(20px);
+        @include respond(tab-land) {
+          transform: translateX(0px);
+        }
+        @include respond(phone) {
+          transform: translateX(0px);
+        }
+      }
+      .right_arrow {
+        @include respond(tab-land) {
+          transform: translateX(0px);
+        }
+        @include respond(phone) {
+          transform: translateX(0px);
+        }
+        transform: translateX(-20px);
+      }
+    }
+    span {
+      img {
+        @include respond(tab-land) {
+          width: 10px;
+          height: auto;
+        }
+      }
+    }
+    p {
+      font-family: Sora;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 30px;
+      color: var(--white);
+      text-align: center;
+      padding: 0 6%;
+      @include respond(tab-land) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+  .clients {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+
+    .client_row {
+      display: flex;
+      width: 100vw;
+      .client {
+        display: flex;
+        margin-right: 17px;
+        flex-shrink: 0;
+        flex-flow: wrap;
+        padding: 55px 40px;
+        border-radius: 2px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2px;
+        border-right: 1px solid var(--White-3, rgba(255, 255, 255, 0.03));
+
+        @include respond(tab-land) {
+          width: 140px;
+          padding: 25px 20px;
+          margin-right: 10px;
+        }
+        img {
+          height: auto;
+          width: auto;
+          @include respond(tab-land) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

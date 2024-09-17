@@ -1,0 +1,109 @@
+@use '@/styles' as *;
+@keyframes marquee {
+  100% {
+    transform: translate(-100%);
+  }
+}
+.tech_main {
+  width: 100%;
+  display: flex;
+  padding: 124px 0px 0px 0px;
+  flex-direction: column;
+  align-items: center;
+  background-color: hsla(12, 88%, 56%, 1);
+  background-image: radial-gradient(at 92% 49%, hsla(12, 88%, 56%, 1) 0px, transparent 50%), radial-gradient(at 6% 56%, hsla(12, 88%, 56%, 1) 0px, transparent 50%),
+    radial-gradient(at 49% 0%, hsla(8, 0%, 100%, 0.71) 0px, transparent 50%);
+  @include respond(tab-land) {
+    padding: 20% 0px 0px 0px;
+  }
+  h2 {
+    color: var(--black, #151313);
+    text-align: center;
+    font-family: 'Sora';
+    font-style: normal;
+    font-weight: 400;
+
+    padding: 0 20% 24px 20%;
+    @include h1;
+    @include respond(tab-land) {
+      padding: 10px;
+    }
+    span {
+      color: var(--white);
+    }
+  }
+  p {
+    color: var(--black80, rgba(21, 19, 19, 0.8));
+    text-align: center;
+    font-family: 'Inter';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 32px;
+    padding: 0 25% 20px 25%;
+    @include respond(tab-land) {
+      font-size: 20px;
+      line-height: 32px;
+      padding: 0 7%;
+    }
+  }
+  .tech_block {
+    width: 100%;
+    display: flex;
+    flex-flow: wrap;
+    padding: 6% 0 4% 0;
+
+    overflow: hidden;
+    @include respond(tab-land) {
+      padding: 12% 0 18% 0;
+    }
+    .tech_marquee {
+      display: flex;
+      flex-flow: column;
+      justify-content: flex-start;
+      width: 120%;
+      margin: 2% 0 2% -2%;
+      transform: rotate(-8deg);
+      @include respond(tab-land) {
+        margin: 2% 0 2% -4%;
+      }
+      .tech_marquee_row {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 32px;
+
+        span {
+          width: max-content;
+          display: flex;
+          margin: 0 5px;
+          padding: 16px 24px;
+          color: var(--white80, rgba(255, 255, 255, 0.8));
+          font-family: 'Inter';
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 32px;
+          justify-content: center;
+          align-items: center;
+          gap: 8px;
+          border-radius: 500px;
+          border: 1px solid var(--white10, rgba(255, 255, 255, 0.1));
+          background: var(--black, #151313);
+
+          @include respond(tab-land) {
+            font-size: 16px;
+            line-height: 22px;
+            padding: 11px 16px;
+          }
+        }
+        .span_10 {
+          background-color: var(--black40);
+        }
+        .span_80 {
+          background-color: var(--black80);
+        }
+      }
+    }
+  }
+}

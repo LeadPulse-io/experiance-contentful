@@ -1,0 +1,62 @@
+@use '@/styles' as *;
+
+.btn_cta {
+  display: flex;
+  height: 56px;
+  padding: 13px 18px 13px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border-radius: 4px;
+  border: 1px solid var(--white10, rgba(255, 255, 255, 0.1));
+  background: var(--Dark, #151313);
+  box-shadow: 0px 0px 0px 0px rgba(242, 89, 48, 0);
+  color: var(--White-80, #fff);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  transition: ease-in-out 200ms;
+  z-index: 10;
+  text-decoration: none;
+
+  cursor: pointer;
+  &:hover {
+    background-color: var(--black80);
+  }
+  svg {
+    transition: ease-in-out 200ms;
+  }
+  &:hover svg {
+    transform: translateX(5px);
+    color: var(--accent);
+  }
+}
+.border_website-development,
+.border_marketing-revops {
+  border-color: var(--accent);
+  margin-bottom: 80px;
+
+  @include respond(tab-land) {
+    margin-bottom: 20px;
+  }
+
+  &:hover {
+    border-color: var(--white80);
+  }
+}
+.border_color {
+  border-color: var(--accent);
+  transition: ease-in-out 300ms;
+  &:hover {
+    border-color: var(--white);
+  }
+}
+.border_managed-services {
+  margin-bottom: 30px;
+  border-color: var(--accent);
+  &:hover {
+    border-color: var(--white80);
+  }
+}

@@ -1,0 +1,5 @@
+pnpm lint-staged
+pnpm format
+pnpm lint
+pnpm build
+git add .

@@ -1,0 +1,316 @@
+@use '@/styles' as *;
+.technology {
+  width: 100%;
+  display: flex;
+  flex-flow: wrap;
+  background-color: var(--black);
+  padding: 6% 8% 10% 8%;
+  max-width: var(--maxwidth);
+  justify-content: center;
+  // @include respond(ultra-wide) {
+  //   padding: 60px;
+  // }
+  @include respond(tab-land) {
+    padding: 10% 10%;
+  }
+  @include respond(tab-port) {
+    padding: 10% 16px 5% 16px;
+  }
+  @include respond(ultra-wide) {
+    padding: 91px 16px 91px 16px;
+  }
+  .technology_title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 21px;
+    padding-bottom: 80px;
+    color: var(--white80, rgba(255, 255, 255, 0.8));
+    text-align: center;
+    font-family: 'Inter';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 2.8px;
+    text-transform: uppercase;
+    @include respond(tab-land) {
+      padding-bottom: 40px;
+    }
+  }
+  .technology_heading {
+    width: 100%;
+    display: flex;
+    flex-flow: wrap;
+    text-align: center;
+
+    .left_arrow,
+    .right_arrow {
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &:hover {
+      .left_arrow {
+        transform: translateX(65px);
+        @include respond(tab-land) {
+          transform: translateX(0px);
+        }
+        @include respond(phone) {
+          transform: translateX(0px);
+        }
+      }
+      .right_arrow {
+        @include respond(tab-land) {
+          transform: translateX(0px);
+        }
+        @include respond(phone) {
+          transform: translateX(0px);
+        }
+        transform: translateX(-65px);
+      }
+    }
+
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      color: var(--White, #fff);
+      font-family: 'Sora';
+
+      font-style: normal;
+      font-weight: 400;
+
+      padding: 0 80px 24px 80px;
+      @include h1;
+
+      @include respond(tab-land) {
+        flex-flow: column;
+        padding: 0 0px 24px 0px;
+      }
+      p {
+        padding: 0 90px;
+        @include h1;
+        @include respond(tab-land) {
+          padding: 0;
+        }
+      }
+      span {
+        color: var(--accent);
+      }
+      img {
+        @include respond(tab-land) {
+          transform: rotate(90deg) !important;
+        }
+      }
+    }
+    .sub {
+      color: var(--white80, rgba(255, 255, 255, 0.8));
+      text-align: center;
+      font-family: 'Inter';
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 32px;
+      padding: 0 12%;
+      @include respond(tab-land) {
+        display: none;
+      }
+    }
+  }
+  .techno_tab {
+    width: 100%;
+    display: flex;
+    flex-flow: wrap;
+    padding-top: 87px;
+    @include respond(tab-land) {
+      flex-flow: column;
+      padding-top: 15px;
+    }
+    .techno_tab_menu {
+      width: 25%;
+      display: flex;
+      flex-flow: wrap;
+      padding-right: 25px;
+      position: relative;
+
+      @include respond(tab-land) {
+        width: 100%;
+        padding: 0;
+      }
+      .mob_menu {
+        min-width: 100%;
+        display: none;
+        padding: 10px 36px 10px 17px;
+        justify-content: space-between;
+        align-items: center;
+        align-self: stretch;
+        border-radius: 4px;
+        border: 1px solid var(--Accent, #f25930);
+        color: var(--White-80, rgba(255, 255, 255, 0.8));
+        text-align: center;
+        font-family: 'Sora';
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 32px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        background-repeat: no-repeat;
+        background-position: 97% center;
+        background-size: 12px;
+        stroke: #fff;
+
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.46967 1.07196C4.76256 0.779072 5.23744 0.779072 5.53033 1.07196L9.28033 4.82197C9.57322 5.11486 9.57322 5.58973 9.28033 5.88263C8.98744 6.17552 8.51256 6.17552 8.21967 5.88263L5 2.66296L1.78033 5.88262C1.48744 6.17552 1.01256 6.17552 0.71967 5.88262C0.426777 5.58973 0.426777 5.11486 0.71967 4.82196L4.46967 1.07196ZM0.71967 10.822C1.01256 10.5291 1.48744 10.5291 1.78033 10.822L5 14.0416L8.21967 10.822C8.51256 10.5291 8.98744 10.5291 9.28033 10.822C9.57322 11.1149 9.57322 11.5897 9.28033 11.8826L5.53033 15.6326C5.23744 15.9255 4.76256 15.9255 4.46967 15.6326L0.71967 11.8826C0.426777 11.5897 0.426777 11.1149 0.71967 10.822Z" fill="white"/></svg>');
+        @include respond(tab-land) {
+          display: block;
+          position: relative;
+        }
+      }
+      #dropdown {
+        display: none;
+      }
+      #dropdown:checked + ul {
+        display: flex;
+        max-height: 100vh;
+      }
+      ul {
+        list-style: none;
+        transition: ease-in-out 300ms;
+        @include respond(tab-land) {
+          width: 100%;
+          position: absolute;
+          flex-direction: column;
+          max-height: 0;
+          overflow: hidden;
+          top: 54px;
+          background-color: var(--white80);
+          border: 1px solid var(--black80);
+        }
+        // @include respond(ultra-wide) {
+        //   width: 100%;
+        // }
+
+        li {
+          @include respond(tab-land) {
+            width: 100%;
+          }
+          button {
+            width: 90%;
+            padding: 10px 16px;
+            border: none;
+            font-family: 'Inter';
+
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 30px;
+            background-color: var(--black);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: none;
+
+            color: var(--white80, rgba(255, 255, 255, 0.8));
+            text-align: center;
+            margin-bottom: 0px;
+            cursor: pointer;
+            transition: ease-in-out 300ms;
+            &:last-child {
+              border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            &:hover {
+              border-right-color: var(--accent);
+              color: var(--accent);
+              width: 91%;
+              @include respond(tab-land) {
+                width: 100%;
+                border-right-color: rgba(255, 255, 255, 0.1);
+              }
+            }
+            @include respond(tab-land) {
+              width: 100%;
+              border-radius: 0px;
+              text-align: center;
+              border-bottom: 1px solid var(--white10);
+              border-radius: 0;
+              margin-bottom: 0px;
+            }
+          }
+          .active {
+            width: 91%;
+            font-size: 18px;
+            border-right-color: var(--accent);
+            border-right-width: 2px;
+            color: var(--accent);
+            @include respond(tab-land) {
+              background-color: var(--black);
+              color: var(--white);
+              font-size: 18px;
+
+              border-radius: 0;
+              margin-bottom: 0px;
+              width: 100%;
+              border-right-color: rgba(255, 255, 255, 0.1);
+            }
+          }
+        }
+      }
+    }
+    .techno_tray {
+      width: 75%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, calc((100% / 4) - 8px));
+      gap: 8px;
+      align-content: flex-start;
+
+      // @include respond(small-desktop) {
+      //   width: 100%;
+      //   grid-template-columns: repeat(auto-fit, calc((100% / 3) - 6px));
+      //   padding-top: 40px;
+      // }
+      @include respond(tab-land) {
+        width: 100%;
+        grid-template-columns: repeat(auto-fit, calc((100% / 3) - 6px));
+        padding-top: 40px;
+      }
+      @include respond(phone) {
+        width: 100%;
+        grid-template-columns: repeat(auto-fit, calc((100% / 2) - 6px));
+        padding-top: 40px;
+      }
+      .tile {
+        display: flex;
+        padding: 15px 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 14px;
+        border-radius: 2px;
+        border: 2px solid var(--white3);
+        min-height: 140px;
+        max-height: 140px;
+        // background: var(--white3);
+        p {
+          color: var(--white80);
+          font-family: 'Inter';
+          text-align: center;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 30px;
+          @include respond(tab-land) {
+            font-size: 14px;
+            line-height: 16px;
+          }
+        }
+        @include respond(tab-land) {
+          background: var(--white3);
+        }
+        img {
+          height: auto;
+        }
+      }
+    }
+  }
+}

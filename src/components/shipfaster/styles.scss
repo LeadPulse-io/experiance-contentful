@@ -1,0 +1,206 @@
+@use '@/styles' as *;
+@keyframes fade_in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.shipfaster_wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: var(--white);
+
+  .shipfaster {
+    width: 100%;
+    display: flex;
+    flex-flow: wrap;
+    background-color: var(---white);
+    padding: 100px 36px;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: var(--maxwidth);
+
+    @include respond(tab-land) {
+      padding: 45px 16px;
+      flex-direction: column;
+      align-items: center;
+    }
+    .shipfaster_title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 21px;
+      color: var(--Black80);
+      text-align: center;
+      font-family: 'Inter';
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 28px;
+      letter-spacing: 2.8px;
+      text-transform: uppercase;
+    }
+    h2 {
+      color: var(--black, #151313);
+      font-family: 'Sora';
+
+      font-style: normal;
+      font-weight: 400;
+
+      padding: 56px 20%;
+      text-align: center;
+      @include h1;
+      span {
+        color: var(--accent);
+      }
+      @include respond(tab-land) {
+        padding: 38px 0 38px 0;
+      }
+    }
+    .ship_faster_main {
+      width: 100%;
+      display: flex;
+      flex-flow: wrap;
+      padding: 0% 12%;
+      background-color: var(--white);
+      justify-content: center;
+
+      transition: all ease-in-out 1s;
+      @include respond(tab-land) {
+        padding: 0% 0%;
+      }
+      @include respond(tab-port) {
+        padding: 0% 0px;
+      }
+      h3 {
+        color: var(--Accent, #f25930);
+        text-align: center;
+        font-family: 'Sora';
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 47px;
+        padding-bottom: 48px;
+        cursor: pointer;
+      }
+      .ship_faster_block {
+        width: 100%;
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        align-content: flex-start;
+
+        @include respond(tab-land) {
+          flex-direction: column-reverse;
+          height: auto;
+        }
+        .data {
+          width: 50%;
+          display: flex;
+          flex-flow: wrap;
+          align-content: flex-start;
+          padding-right: 55px;
+          @include respond(tab-land) {
+            width: 100%;
+            padding: 0 0 0px 0;
+          }
+          .accordion {
+            width: 100%;
+            display: flex;
+            flex-flow: wrap;
+            align-content: flex-start;
+            cursor: pointer;
+            border-bottom: 1px solid var(--black10);
+            label {
+              cursor: pointer;
+            }
+            &:last-child {
+              border: 0;
+            }
+            input[type='checkbox'] {
+              display: none;
+            }
+
+            input[type='checkbox']:checked + div {
+              display: flex;
+              animation: fade_in;
+              animation-duration: 300ms;
+            }
+
+            .accordion_title {
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              color: var(--Black-80, rgba(21, 19, 19, 0.8));
+              font-family: 'Inter';
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 30px;
+              padding: 16px;
+              gap: 8px;
+              @include respond(tab-land) {
+                padding: 16px 16px 6px 16px;
+              }
+            }
+
+            .accordion_data {
+              width: 100%;
+              font-family: 'Inter';
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 300;
+              line-height: 30px;
+              padding: 0px 16px 0px 16px;
+              transition: ease-in-out 250ms;
+              transition-delay: 250ms;
+              color: var(--black);
+
+              max-height: 0;
+              overflow: hidden;
+              @include respond(tab-land) {
+                line-height: 24px;
+              }
+            }
+            .open {
+              max-height: 100vh;
+              padding: 0px 16px 16px 16px;
+            }
+            .accordion_title:hover + .accordion_data {
+              max-height: 100vh;
+              padding: 0px 16px 16px 16px;
+            }
+          }
+          .highlighted {
+            border-radius: 8px;
+            border: 1px solid var(--Accent, #f25930) !important;
+          }
+          .accordion input[type='checkbox']:checked .accordion {
+            border: #f25930 1px solid;
+          }
+        }
+        .image {
+          width: 50%;
+          display: flex;
+          flex-flow: wrap;
+          justify-content: center;
+          align-items: flex-start;
+
+          @include respond(tab-land) {
+            width: 100%;
+            margin: 0 0 40px 0;
+          }
+          svg {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}

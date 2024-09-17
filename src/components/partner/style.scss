@@ -1,0 +1,35 @@
+@use '@/styles' as *;
+.partners {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  margin-top: 15px;
+  padding-left: 12%;
+  transition: ease-in-out 200ms;
+
+  @include respond(tab-land) {
+    padding-left: 0%;
+  }
+  .partner {
+    display: flex;
+    font-family: 'Sora';
+    font-size: 22px;
+    margin-right: 17px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 32px;
+    padding: 30px 60px;
+    color: var(--accent);
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    border: 1px solid var(--white10, rgba(255, 255, 255, 0.1));
+    background: var(--white3, rgba(255, 255, 255, 0.03));
+    img {
+      height: auto;
+    }
+  }
+}

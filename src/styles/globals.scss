@@ -1,0 +1,94 @@
+:root {
+  --accent: hsl(13, 88%, 57%);
+  --accentdark: #e53e1a;
+  --dark: rgba(0 0 0);
+  --black: #151313;
+  --black80: rgba(21, 19, 19, 0.8);
+  --black40: rgba(21, 19, 19, 0.4);
+  --black10: rgba(21, 19, 19, 0.1);
+  --black3: rgba(21, 19, 19, 0.03);
+
+  --white: rgba(255 255 255);
+  --white80: rgba(255, 255, 255, 0.8);
+  --white40: rgba(255, 255, 255, 0.4);
+  --white10: rgba(255, 255, 255, 0.1);
+  --white3: rgba(255, 255, 255, 0.03);
+  --white6: rgba(255, 255, 255, 0.6);
+  --maxwidth: 1440px;
+
+  @font-face {
+    font-family: 'Inter';
+    src:
+      url('fonts/Inter-Regular.woff2') format('woff2'),
+      url('fonts/Inter-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Sora';
+    src:
+      url('fonts/Sora-Regular.woff2') format('woff2'),
+      url('fonts/Sora-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  background-color: var(--white);
+  ::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #f25b31;
+    border-radius: 20px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: hsla(0, 0%, 100%, 0.1);
+    border-radius: 20px;
+  }
+}
+
+* {
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+  scrollbar-color: #f25b31 hsla(0, 0%, 100%, 0.1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.container_wrap {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  background-color: var(--black);
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    //  max-width: var(--maxwidth);
+    align-items: center;
+  }
+}
+.custom-toast {
+  font-size: 16px;
+  font-family: 'Sora';
+  color: var(--accent) !important;
+}

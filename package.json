@@ -1,0 +1,54 @@
+{
+  "name": "leadpulse.io",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "in": "pnpm i --frozen-lockfile",
+    "lint": "prettier --check . & next lint",
+    "format": "prettier --write .",
+    "postinstall": "husky"
+  },
+  "dependencies": {
+    "@contentful/experiences-sdk-react": "1.15.1",
+    "@heroicons/react": "^2.1.3",
+    "@splinetool/react-spline": "^3.1.0",
+    "clsx": "^2.1.1",
+    "contentful": "10.15.1",
+    "embla-carousel-react": "^8.1.5",
+    "marked": "^13.0.0",
+    "next": "14.2.3",
+    "react": "18",
+    "react-dom": "18",
+    "react-fast-marquee": "^1.6.4",
+    "react-hot-toast": "^2.4.1",
+    "react-responsive-carousel": "^3.2.23",
+    "react-slick": "^0.30.2",
+    "slick-carousel": "^1.8.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "20",
+    "@types/react": "18",
+    "@types/react-dom": "18",
+    "eslint": "8",
+    "eslint-config-next": "14.2.3",
+    "eslint-config-prettier": "9.1.0",
+    "husky": "9.0.11",
+    "lint-staged": "15.2.7",
+    "prettier": "3.3.1",
+    "sass": "1.77.4",
+    "typescript": "5"
+  },
+  "engines": {
+    "node": ">=20.12.0",
+    "pnpm": ">=9.3.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,json}": [
+      "prettier --write"
+    ]
+  }
+}

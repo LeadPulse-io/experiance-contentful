@@ -1,0 +1,74 @@
+@mixin respond($breakpoint) {
+  // phone
+  @if $breakpoint==phone {
+    @media only screen and (width<=576px) {
+      @content;
+    }
+  }
+
+  //tab-port
+  @if $breakpoint==tab-port {
+    @media only screen and (width<=768px) {
+      @content;
+    }
+  }
+
+  //tab-land
+  @if $breakpoint==tab-land {
+    @media only screen and (width<=992px) {
+      @content;
+    }
+  }
+
+  // big-desktop
+  @if $breakpoint==small-desktop {
+    @media only screen and (width<=1280px) {
+      @content;
+    }
+  }
+
+  // big-desktop
+  @if $breakpoint==large-desktop {
+    @media only screen and (width>=1600px) {
+      @content;
+    }
+  }
+  // ultra-wide
+  @if $breakpoint==ultra-wide {
+    @media only screen and (width>=1992px) {
+      @content;
+    }
+  }
+}
+@mixin h1 {
+  font-size: 72px;
+  line-height: 80px;
+  @include respond(tab-land) {
+    font-size: 48px;
+    line-height: 56px;
+  }
+  @include respond(phone) {
+    font-size: 8.5vw;
+    line-height: 12vw;
+  }
+  @media only screen and (max-height: 600px) and (orientation: landscape) {
+    font-size: 6.5vw;
+    line-height: 7vw;
+  }
+}
+@mixin lead {
+  font-size: 24px;
+  line-height: 32px;
+  @include respond(tab-land) {
+    font-size: 20px;
+    line-height: 32px;
+  }
+  @include respond(phone) {
+    font-size: 2.2vh;
+    line-height: 3.8vh;
+  }
+  @media only screen and (max-height: 600px) and (orientation: landscape) {
+    font-size: 4vh;
+    line-height: 5vh;
+  }
+}

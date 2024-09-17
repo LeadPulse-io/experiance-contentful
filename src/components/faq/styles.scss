@@ -1,0 +1,112 @@
+@use '@/styles' as *;
+
+.faq {
+  width: 100%;
+  display: flex;
+  flex-flow: wrap;
+  padding: 6% 8%;
+  background-color: var(--black);
+  justify-content: center;
+  max-width: var(--maxwidth);
+  @include respond(ultra-wide) {
+    padding: 80px 121px;
+  }
+  @include respond(tab-land) {
+    padding: 6% 10%px;
+  }
+  @include respond(tab-port) {
+    padding: 6% 16px;
+  }
+  h3 {
+    color: var(--Accent, #f25930);
+    text-align: center;
+    font-family: 'Sora';
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 47px;
+    padding-bottom: 48px;
+    @include respond(tab-land) {
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+  .faq_block {
+    width: 100%;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    padding: 0 15%;
+    @include respond(ultra-wide) {
+      padding: 0 200px;
+    }
+    @include respond(tab-land) {
+      padding: 0%;
+    }
+    .data {
+      width: 100%;
+      display: flex;
+      flex-flow: wrap;
+      align-content: flex-start;
+      padding-right: 32px;
+      @include respond(tab-land) {
+        width: 100%;
+        padding: 0 0 30px 0;
+      }
+      .accordion {
+        width: 100%;
+        display: flex;
+        flex-flow: wrap;
+        align-content: flex-start;
+        border-bottom: 1px solid var(--Accent, #f25930);
+        input[type='checkbox'] {
+          display: none;
+        }
+        input[type='checkbox']:checked + div {
+          display: flex;
+          max-height: 100vh;
+          padding-bottom: 20px;
+        }
+        .accordion_title {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          color: #fff;
+          font-family: 'Inter';
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 30px;
+          cursor: pointer;
+
+          padding: 12px 0;
+          @include respond(tab-land) {
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+        .accordion_data {
+          width: 100%;
+          font-family: 'Inter';
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 30px;
+          padding: 0px 0 0px 0;
+          color: var(--white80);
+          transition: cubic-bezier(0.455, 0.03, 0.515, 0.955) 300ms;
+          border-radius: 8px;
+          max-height: 0;
+          overflow: hidden;
+          @include respond(tab-land) {
+            font-size: 14px;
+            line-height: 20px;
+          }
+          a {
+            color: var(--accent);
+          }
+        }
+      }
+    }
+  }
+}
