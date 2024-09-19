@@ -19,7 +19,7 @@ export default async function Home() {
   const experience = await fetchBySlug({
     client,
     slug: 'home',
-    experienceTypeId: 'landingPage',
+    experienceTypeId: 'leadpulseLandingPage',
     localeCode: 'en-US'
   })
 
