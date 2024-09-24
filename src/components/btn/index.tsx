@@ -11,9 +11,9 @@ export function Button({ text }: Props) {
 const thumbnailUrl = 'https://images.ctfassets.net/drya7kvck7n6/7wrYr53XFL9jeOOwLvh0Sq/49d80dc701b46848be1a57157a460436/image.png'
 
 export const buttonDefinition: ComponentDefinition = {
-  id: 'button',
-  name: 'Button',
-  category: 'Base',
+  id: 'test',
+  name: 'New Comp',
+  category: 'Custom Components',
   thumbnailUrl: thumbnailUrl,
   builtInStyles: ['cfBackgroundColor'],
   tooltip: {
@@ -48,7 +48,6 @@ export const buttonDefinition: ComponentDefinition = {
       defaultValue: '/',
       hyperlinkPattern: '/{locale}/experience/{entry.fields.slug}'
     },
-
     random: {
       displayName: 'Random Array Example',
       type: 'Array',
