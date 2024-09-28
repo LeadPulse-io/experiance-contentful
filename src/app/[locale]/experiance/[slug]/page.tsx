@@ -1,9 +1,9 @@
-import Head from 'next/head'
 import { ExperienceRoot, fetchBySlug, detachExperienceStyles } from '@contentful/experiences-sdk-react'
 
 import { client } from '@/utils/contentful-client'
-import Footer from '@/components/footer'
 import Navbar from '@/components/navbar'
+
+export const dynamic = 'force-dynamic'
 
 interface Props {
   params: { locale: string; slug: string }
@@ -25,16 +25,15 @@ export default async function Page({ params: { slug } }: Props) {
 
   return (
     <>
-      <Head>
-        {stylesheet && (
-          <style key="experiance-ss" data-ssg>
-            {stylesheet}
-          </style>
-        )}
-      </Head>
+      {stylesheet && (
+        <style key="experiance-ss" data-ssg>
+          {stylesheet}
+        </style>
+      )}
       <Navbar />
-      <ExperienceRoot experience={experienceJSON} locale={localeCode} />
-      <Footer />
+      <div className="w-full">
+        <ExperienceRoot experience={experienceJSON} locale={localeCode} />
+      </div>
     </>
   )
 }
