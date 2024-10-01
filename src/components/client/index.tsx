@@ -16,7 +16,7 @@ export function Client(props: any) {
           <span>
             <Image src="/arrow_left.png" width={'23'} height={'52'} alt="truenorth" className="left_arrow" />
           </span>
-          <p>{props.props.blurb}</p>
+          <p>{props.blurb ?? ''}</p>
           <span>
             <Image src="/arrow_right.png" width={'23'} height={'52'} alt="truenorth" className="right_arrow" />
           </span>
