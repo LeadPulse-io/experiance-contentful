@@ -67,6 +67,11 @@ export const ClientDefinition: ComponentDefinition = {
         type: 'Array',
         items: {
           type: 'Link',
+          validations: [
+            {
+              linkContentType: ['itemCard']
+            }
+          ],
           linkType: 'Entry'
         }
       },
