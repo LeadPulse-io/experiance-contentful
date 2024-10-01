@@ -56,9 +56,9 @@ export const ClientDefinition: ComponentDefinition = {
     },
     clients: {
       displayName: 'Clients',
-      type: 'Object',
+      type: 'Array',
       items: {
-        type: 'Link',
+        type: 'Object',
         validations: [
           {
             linkContentType: ['itemCard']
