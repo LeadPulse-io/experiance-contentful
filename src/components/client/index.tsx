@@ -49,31 +49,22 @@ export const ClientDefinition: ComponentDefinition = {
   variables: {
     // there are two types of variables, content variables and design variables
     label: {
-      displayName: 'Label',
+      displayName: 'Blurb',
       type: 'Text', //  'Text' | 'RichText' | 'Number' | 'Date' | 'Boolean' | 'Location' | 'Media' | 'Object' | 'Hyperlink' | 'Link' | 'Array';
-      defaultValue: 'Clients',
+      defaultValue: 'blurb',
       group: 'content'
     },
-    variables: {
-      // there are two types of variables, content variables and design variables
-      label: {
-        displayName: 'Blurb',
-        type: 'Text', //  'Text' | 'RichText' | 'Number' | 'Date' | 'Boolean' | 'Location' | 'Media' | 'Object' | 'Hyperlink' | 'Link' | 'Array';
-        defaultValue: 'blurb',
-        group: 'content'
-      },
-      clients: {
-        displayName: 'Clients',
-        type: 'Array',
-        items: {
-          type: 'Link',
-          validations: [
-            {
-              linkContentType: ['itemCard']
-            }
-          ],
-          linkType: 'Entry'
-        }
+    clients: {
+      displayName: 'Clients',
+      type: 'Array',
+      items: {
+        type: 'Link',
+        validations: [
+          {
+            linkContentType: ['itemCard']
+          }
+        ],
+        linkType: 'Entry'
       },
       // bind to a string list
       listText: {
