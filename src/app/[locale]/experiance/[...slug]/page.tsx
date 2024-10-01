@@ -6,13 +6,13 @@ import Navbar from '@/components/navbar'
 export const dynamic = 'force-dynamic'
 
 interface Props {
-  params: { locale: string; slug: string }
+  params: { locale: string; slug: string[] }
 }
 
 export default async function Page({ params: { slug } }: Props) {
   const experience = await fetchBySlug({
     client,
-    slug,
+    slug: slug.join('/'),
     experienceTypeId: 'leadpulseLandingPage',
     localeCode: 'en-US'
   })
