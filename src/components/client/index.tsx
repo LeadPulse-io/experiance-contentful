@@ -54,33 +54,37 @@ export const ClientDefinition: ComponentDefinition = {
       defaultValue: 'Clients',
       group: 'content'
     },
-    clients: {
-      displayName: 'clients list',
-      type: 'Array',
-      items: {
-        type: 'Media',
-        validations: [
-          {
-            linkContentType: ['itemCard']
-          }
-        ],
-        linkType: 'Entry'
+    variables: {
+      // there are two types of variables, content variables and design variables
+      label: {
+        displayName: 'Blurb',
+        type: 'Text', //  'Text' | 'RichText' | 'Number' | 'Date' | 'Boolean' | 'Location' | 'Media' | 'Object' | 'Hyperlink' | 'Link' | 'Array';
+        defaultValue: 'blurb',
+        group: 'content'
+      },
+      clients: {
+        displayName: 'Clients',
+        type: 'Array',
+        items: {
+          type: 'Link',
+          linkType: 'Entry'
+        }
+      },
+      // bind to a string list
+      listText: {
+        displayName: 'List Text',
+        type: 'Array'
+      },
+      // bind to an entry reference
+      entryReference: {
+        displayName: 'Entry Reference',
+        type: 'Link'
+      },
+      // bind to a list of entries
+      listReference: {
+        displayName: 'List Entry Reference',
+        type: 'Array'
       }
-    },
-    // bind to a string list
-    listText: {
-      displayName: 'List Text',
-      type: 'Array'
-    },
-    // bind to an entry reference
-    entryReference: {
-      displayName: 'Entry Reference',
-      type: 'Link'
-    },
-    // bind to a list of entries
-    listReference: {
-      displayName: 'List Entry Reference',
-      type: 'Array'
     }
   }
 }
