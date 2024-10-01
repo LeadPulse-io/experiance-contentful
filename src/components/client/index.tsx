@@ -1,9 +1,14 @@
+'use client'
+
 import Image from 'next/image'
+import Marquee from 'react-fast-marquee'
+import { ComponentDefinition } from '@contentful/experiences-sdk-react'
 
 import './style.scss'
-import Marquee from 'react-fast-marquee'
 
-export default function Client(props: any) {
+export function Client(props: any) {
+  console.log(props)
+
   return (
     <>
       <div className="clients_wrap">
@@ -19,7 +24,7 @@ export default function Client(props: any) {
         <div className="clients">
           <div className="client_row">
             <Marquee speed={40} autoFill>
-              {props.props.itemsCollection.items.map((item: any) => (
+              {props.clients?.map((item: any) => (
                 <div className="client" key={item.title}>
                   <Image src={item.image.url} width={'117'} height={'43'} alt={item.image.title} />
                 </div>
@@ -30,4 +35,52 @@ export default function Client(props: any) {
       </div>
     </>
   )
+}
+
+export const ClientDefinition: ComponentDefinition = {
+  id: 'clients',
+  name: 'Clients',
+  category: 'Options',
+  builtInStyles: [],
+  tooltip: {
+    // imageUrl: thumbnailUrl,
+    description: 'Add a carousel to the canvas'
+  },
+  variables: {
+    // there are two types of variables, content variables and design variables
+    label: {
+      displayName: 'Label',
+      type: 'Text', //  'Text' | 'RichText' | 'Number' | 'Date' | 'Boolean' | 'Location' | 'Media' | 'Object' | 'Hyperlink' | 'Link' | 'Array';
+      defaultValue: 'Clients',
+      group: 'content'
+    },
+    clients: {
+      displayName: 'clients list',
+      type: 'Array',
+      items: {
+        type: 'Media',
+        validations: [
+          {
+            linkContentType: ['itemCard']
+          }
+        ],
+        linkType: 'Entry'
+      }
+    },
+    // bind to a string list
+    listText: {
+      displayName: 'List Text',
+      type: 'Array'
+    },
+    // bind to an entry reference
+    entryReference: {
+      displayName: 'Entry Reference',
+      type: 'Link'
+    },
+    // bind to a list of entries
+    listReference: {
+      displayName: 'List Entry Reference',
+      type: 'Array'
+    }
+  }
 }

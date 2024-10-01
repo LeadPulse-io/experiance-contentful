@@ -3,9 +3,13 @@
 import { CONTENTFUL_COMPONENTS, defineComponents, defineDesignTokens } from '@contentful/experiences-sdk-react'
 // components
 import { Button, buttonDefinition } from '@/components/btn'
+import { Client, ClientDefinition } from '@/components/client'
 
 // Define components
-const components = [{ component: Button, definition: buttonDefinition }]
+const components = [
+  { component: Button, definition: buttonDefinition },
+  { component: Client, definition: ClientDefinition }
+]
 
 // Register components
 defineComponents(components, {
