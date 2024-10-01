@@ -41,14 +41,14 @@ export const ClientDefinition: ComponentDefinition = {
   id: 'clients',
   name: 'Clients',
   category: 'Options',
-  builtInStyles: [],
+  builtInStyles: ['cfBackgroundColor'],
   tooltip: {
     // imageUrl: thumbnailUrl,
     description: 'Add a carousel to the canvas'
   },
   variables: {
     // there are two types of variables, content variables and design variables
-    label: {
+    blurb: {
       displayName: 'Blurb',
       type: 'Text', //  'Text' | 'RichText' | 'Number' | 'Date' | 'Boolean' | 'Location' | 'Media' | 'Object' | 'Hyperlink' | 'Link' | 'Array';
       defaultValue: 'blurb',
@@ -56,7 +56,7 @@ export const ClientDefinition: ComponentDefinition = {
     },
     clients: {
       displayName: 'Clients',
-      type: 'Array',
+      type: 'Object',
       items: {
         type: 'Link',
         validations: [
