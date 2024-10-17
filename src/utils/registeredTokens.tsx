@@ -11,7 +11,9 @@ import {
   AccordionItem,
   AccordionItemDefinition,
   AccordionTrigger,
-  AccordionTriggerDefinition
+  AccordionTriggerDefinition,
+  AccordionMain,
+  AccordionMainDefinition
 } from '@/components/experiance/accordion'
 import { Client, ClientDefinition } from '@/components/client'
 
@@ -22,7 +24,8 @@ const components = [
   { component: Accordion, definition: AccordionDefinition },
   { component: AccordionContent, definition: AccordionContentDefinition },
   { component: AccordionItem, definition: AccordionItemDefinition },
-  { component: AccordionTrigger, definition: AccordionTriggerDefinition }
+  { component: AccordionTrigger, definition: AccordionTriggerDefinition },
+  { component: AccordionMain, definition: AccordionMainDefinition }
 ]
 
 // Register components

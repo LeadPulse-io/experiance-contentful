@@ -114,6 +114,38 @@ const AccordionContent = React.forwardRef<React.ElementRef<typeof AccordionPrimi
 
 AccordionContent.displayName = AccordionPrimitive.Content.displayName
 
+function AccordionMain({ title, content }: { title: string; content: string }) {
+  return (
+    <Accordion type="single" collapsible className="w-full">
+      <AccordionItem value="item-1">
+        <AccordionTrigger>{title}</AccordionTrigger>
+        <AccordionContent>{content}</AccordionContent>
+      </AccordionItem>
+    </Accordion>
+  )
+}
+
+const AccordionMainDefinition: ComponentDefinition = {
+  id: 'Accordion',
+  name: 'Accordion Content',
+  builtInStyles: [],
+  variables: {
+    // there are two types of variables, content variables and design variables
+    title: {
+      displayName: 'Title',
+      type: 'Text',
+      group: 'content', // Possible values: style, content,
+      defaultValue: 'Default Title'
+    },
+    content: {
+      displayName: 'Content',
+      type: 'Text',
+      group: 'content',
+      defaultValue: 'Default Content'
+    }
+  }
+}
+
 const AccordionContentDefinition: ComponentDefinition = {
   id: 'AccordionContent',
   name: 'Accordion Content',
@@ -133,4 +165,15 @@ const AccordionContentDefinition: ComponentDefinition = {
   }
 }
 
-export { Accordion, AccordionDefinition, AccordionItem, AccordionItemDefinition, AccordionTrigger, AccordionTriggerDefinition, AccordionContent, AccordionContentDefinition }
+export {
+  AccordionMain,
+  AccordionMainDefinition,
+  Accordion,
+  AccordionDefinition,
+  AccordionItem,
+  AccordionItemDefinition,
+  AccordionTrigger,
+  AccordionTriggerDefinition,
+  AccordionContent,
+  AccordionContentDefinition
+}
