@@ -126,8 +126,8 @@ function AccordionMain({ title, content }: { title: string; content: string }) {
 }
 
 const AccordionMainDefinition: ComponentDefinition = {
-  id: 'Accordion',
-  name: 'Accordion Content',
+  id: 'AccordionMain',
+  name: 'Accordion Main',
   builtInStyles: [],
   variables: {
     // there are two types of variables, content variables and design variables
