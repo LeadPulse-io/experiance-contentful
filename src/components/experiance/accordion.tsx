@@ -12,7 +12,6 @@ const Accordion = AccordionPrimitive.Root
 const AccordionDefinition: ComponentDefinition = {
   id: 'Accordion',
   name: 'Accordion',
-  category: 'Components',
   children: true,
   builtInStyles: [],
   tooltip: {
@@ -50,7 +49,6 @@ AccordionItem.displayName = 'AccordionItem'
 const AccordionItemDefinition: ComponentDefinition = {
   id: 'AccordionItem',
   name: 'Accordion Item',
-  category: 'Components',
   children: true,
   builtInStyles: [],
   tooltip: {
@@ -86,7 +84,6 @@ AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
 const AccordionTriggerDefinition: ComponentDefinition = {
   id: 'AccordionTrigger',
   name: 'Accordion Trigger',
-  category: 'Components',
   builtInStyles: [],
   tooltip: {
     // imageUrl: thumbnailUrl,
@@ -120,7 +117,6 @@ AccordionContent.displayName = AccordionPrimitive.Content.displayName
 const AccordionContentDefinition: ComponentDefinition = {
   id: 'AccordionContent',
   name: 'Accordion Content',
-  category: 'Components',
   builtInStyles: [],
   tooltip: {
     // imageUrl: thumbnailUrl,
