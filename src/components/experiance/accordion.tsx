@@ -166,8 +166,8 @@ function AccordionItemTest({ title, content }: { title: string; content: string;
 }
 
 const AccordionItemTestDefinition: ComponentDefinition = {
-  id: 'AccordionMain',
-  name: 'Accordion Main',
+  id: 'AccordionItemTest',
+  name: 'Accordion ItemTest',
   builtInStyles: [],
   variables: {
     // there are two types of variables, content variables and design variables
