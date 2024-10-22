@@ -7,13 +7,18 @@ import { ChevronDown } from 'lucide-react'
 
 import { cn } from '@/lib/utils'
 
-const Accordion = AccordionPrimitive.Root
+const Accordion = (props: any) => <AccordionPrimitive.Root {...props}>{props.childrenSlot1} </AccordionPrimitive.Root>
 
 const AccordionDefinition: ComponentDefinition = {
   id: 'Accordion',
   name: 'Accordion',
   children: true,
   builtInStyles: [],
+  slots: {
+    childrenSlot1: {
+      displayName: 'Slot 1'
+    }
+  },
   tooltip: {
     // imageUrl: thumbnailUrl,
     description: 'Add a accordion to the canvas'
@@ -55,6 +60,11 @@ const AccordionItemDefinition: ComponentDefinition = {
     // imageUrl: thumbnailUrl,
     description: 'Add a accordion item to the canvas'
   },
+  slots: {
+    childrenSlot2: {
+      displayName: 'Slot 2'
+    }
+  },
   variables: {
     // there are two types of variables, content variables and design variables
     type: {
@@ -65,20 +75,18 @@ const AccordionItemDefinition: ComponentDefinition = {
   }
 }
 
-const AccordionTrigger = React.forwardRef<React.ElementRef<typeof AccordionPrimitive.Trigger>, React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>>(
-  ({ className, children, ...props }, ref) => (
-    <AccordionPrimitive.Header className="flex">
-      <AccordionPrimitive.Trigger
-        ref={ref}
-        className={cn('flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180', className)}
-        {...props}
-      >
-        {children}
-        <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
-      </AccordionPrimitive.Trigger>
-    </AccordionPrimitive.Header>
-  )
-)
+const AccordionTrigger = React.forwardRef<React.ElementRef<typeof AccordionPrimitive.Trigger>, any>(({ className, childrenSlot2, ...props }, ref) => (
+  <AccordionPrimitive.Header className="flex">
+    <AccordionPrimitive.Trigger
+      ref={ref}
+      className={cn('flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180', className)}
+      {...props}
+    >
+      {childrenSlot2}
+      <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
+    </AccordionPrimitive.Trigger>
+  </AccordionPrimitive.Header>
+))
 AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
 
 const AccordionTriggerDefinition: ComponentDefinition = {
@@ -114,18 +122,50 @@ const AccordionContent = React.forwardRef<React.ElementRef<typeof AccordionPrimi
 
 AccordionContent.displayName = AccordionPrimitive.Content.displayName
 
-function AccordionMain({ title, content }: { title: string; content: string }) {
+function AccordionMain({ childrenSlot2 }: { title: string; content: string; childrenSlot2: any }) {
   return (
     <Accordion type="single" collapsible className="w-full">
-      <AccordionItem value="item-1">
-        <AccordionTrigger>{title}</AccordionTrigger>
-        <AccordionContent>{content}</AccordionContent>
-      </AccordionItem>
+      {childrenSlot2}
     </Accordion>
   )
 }
 
 const AccordionMainDefinition: ComponentDefinition = {
+  id: 'AccordionMain',
+  name: 'Accordion Main',
+  builtInStyles: [],
+  slots: {
+    childrenSlot2: {
+      displayName: 'Slot 1'
+    }
+  },
+  variables: {
+    // there are two types of variables, content variables and design variables
+    title: {
+      displayName: 'Title',
+      type: 'Text',
+      group: 'content', // Possible values: style, content,
+      defaultValue: 'Default Title'
+    },
+    content: {
+      displayName: 'Content',
+      type: 'Text',
+      group: 'content',
+      defaultValue: 'Default Content'
+    }
+  }
+}
+
+function AccordionItemTest({ title, content }: { title: string; content: string; childrenSlot2: any }) {
+  return (
+    <AccordionItem value="item-1">
+      <AccordionTrigger>{title}</AccordionTrigger>
+      <AccordionContent>{content}</AccordionContent>
+    </AccordionItem>
+  )
+}
+
+const AccordionItemTestDefinition: ComponentDefinition = {
   id: 'AccordionMain',
   name: 'Accordion Main',
   builtInStyles: [],
@@ -175,5 +215,7 @@ export {
   AccordionTrigger,
   AccordionTriggerDefinition,
   AccordionContent,
-  AccordionContentDefinition
+  AccordionContentDefinition,
+  AccordionItemTest,
+  AccordionItemTestDefinition
 }
