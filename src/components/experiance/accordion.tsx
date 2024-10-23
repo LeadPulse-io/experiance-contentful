@@ -8,7 +8,7 @@ import { ChevronDown } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const Accordion = (props: any) => (
-  <AccordionPrimitive.Root {...props} style={{ minHeight: '100px', minWidth: '100%' }}>
+  <AccordionPrimitive.Root {...props} style={{ minHeight: '400px', minWidth: '100%' }}>
     {props.childrenSlot1}
   </AccordionPrimitive.Root>
 )
@@ -50,10 +50,11 @@ const AccordionDefinition: ComponentDefinition = {
   }
 }
 
-const AccordionItem = React.forwardRef<React.ElementRef<typeof AccordionPrimitive.Item>, React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>>(
-  ({ className, ...props }, ref) => <AccordionPrimitive.Item ref={ref} className={cn('border-b', className)} {...props} />
+const AccordionItem = ({ className, childrenSlot2, ...props }: any) => (
+  <AccordionPrimitive.Item className={cn('border-b', className)} {...props}>
+    {childrenSlot2}
+  </AccordionPrimitive.Item>
 )
-AccordionItem.displayName = 'AccordionItem'
 
 const AccordionItemDefinition: ComponentDefinition = {
   id: 'AccordionItem',
@@ -64,13 +65,11 @@ const AccordionItemDefinition: ComponentDefinition = {
     // imageUrl: thumbnailUrl,
     description: 'Add a accordion item to the canvas'
   },
-  slots: [
-    {
-      childrenSlot2: {
-        displayName: 'Slot 2'
-      }
+  slots: {
+    childrenSlot2: {
+      displayName: 'Slot 2'
     }
-  ],
+  },
   variables: {
     // there are two types of variables, content variables and design variables
     type: {
