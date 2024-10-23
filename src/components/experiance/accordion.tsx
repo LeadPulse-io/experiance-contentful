@@ -7,7 +7,11 @@ import { ChevronDown } from 'lucide-react'
 
 import { cn } from '@/lib/utils'
 
-const Accordion = (props: any) => <AccordionPrimitive.Root {...props}>{props.childrenSlot1} </AccordionPrimitive.Root>
+const Accordion = (props: any) => (
+  <AccordionPrimitive.Root {...props} style={{ minHeight: '100px', minWidth: '100%' }}>
+    {props.childrenSlot1}
+  </AccordionPrimitive.Root>
+)
 
 const AccordionDefinition: ComponentDefinition = {
   id: 'Accordion',
@@ -60,11 +64,13 @@ const AccordionItemDefinition: ComponentDefinition = {
     // imageUrl: thumbnailUrl,
     description: 'Add a accordion item to the canvas'
   },
-  slots: {
-    childrenSlot2: {
-      displayName: 'Slot 2'
+  slots: [
+    {
+      childrenSlot2: {
+        displayName: 'Slot 2'
+      }
     }
-  },
+  ],
   variables: {
     // there are two types of variables, content variables and design variables
     type: {
