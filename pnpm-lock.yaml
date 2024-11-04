@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@contentful/experiences-sdk-react':
-        specifier: 1.19.0
-        version: 1.19.0(@types/react-dom@18.3.0)(@types/react@18.3.8)(contentful@11.0.3)(postcss@8.4.47)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@5.4.7(@types/node@20.16.6)(sass@1.79.3))
+        specifier: 1.20.0
+        version: 1.20.0(@types/react-dom@18.3.0)(@types/react@18.3.8)(contentful@11.0.3)(postcss@8.4.47)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@5.4.7(@types/node@20.16.6)(sass@1.79.3))
       '@heroicons/react':
         specifier: ^2.1.5
         version: 2.1.5(react@18.3.1)
@@ -242,29 +242,29 @@ packages:
   '@contentful/content-source-maps@0.11.3':
     resolution: {integrity: sha512-RFF9reUVU6o6A/Rm1662Ez+BhyVgcATs8yvNKIVJWvXQkwsgevLLZduAn2jU7Dl/q1EgJLeJFeuOREtk8LY3zQ==}
 
-  '@contentful/experiences-components-react@1.19.0':
-    resolution: {integrity: sha512-3X1fFXVW1XLN5bWsav4DOQi1hevk/nvU+uUBTMqlK5AKEvlXO5kTIvntYrUMc7Fh2nkf6Mz0aCa4TdgFdD5hrQ==}
+  '@contentful/experiences-components-react@1.20.0':
+    resolution: {integrity: sha512-wdD1mX9EG9x0+ItupbKaCJpeP7XaSy2l5nVoM/vYheMq3ugfz3nWKdqkW0Lr2qIFMulaE/ruVkJjp5l+tCd/Jg==}
     peerDependencies:
       react: '>=17.0.0'
       react-dom: '>=17.0.0'
 
-  '@contentful/experiences-core@1.19.0':
-    resolution: {integrity: sha512-MaGqtdR7xOtsjUKkttRU/HQ31bsaA5T6b4++iTBEmw7CWE9zNMrJGfdTPmAIkuU7nb1MJ0aUcVFQVlyyucM96Q==}
+  '@contentful/experiences-core@1.20.0':
+    resolution: {integrity: sha512-b+Fr4jX/3XlU3d0KkZgm8Su9r7Y+qwUJCVEXxV37GUVChKCmHE38AhfdBLkEqCDxzOc0uybobGbz5YypHWJchQ==}
     peerDependencies:
       contentful: '>=10.6.0'
 
-  '@contentful/experiences-sdk-react@1.19.0':
-    resolution: {integrity: sha512-iuoOYpjgx3qtkjES2iJR6aU+ivy6CuXhu+WzvlWRuJ9QXwAeD4GaMe6PEqrZUs1UJvvqeZ/LeLJP2wB/OUkz3w==}
+  '@contentful/experiences-sdk-react@1.20.0':
+    resolution: {integrity: sha512-x1I/2OTuMcL/VCrvpKSX6P0/NMkVvoTd5w0uwA65+nRB8Dj+XfihDXiR967rV5/h4ef5nT3ldPttVrz2C5+79w==}
     peerDependencies:
       contentful: '>=10.6.0'
       react: '>=16.0.0'
       react-dom: '>=16.0.0'
 
-  '@contentful/experiences-validators@1.19.0':
-    resolution: {integrity: sha512-lcTKWIkkC7yFhqna0i1lyCr5PFFT4OZf0uBH3av28P5mbzY9yucFGNdRluxVXVkf1DDYUZ2xs9UFOrJaGPYeRw==}
+  '@contentful/experiences-validators@1.20.0':
+    resolution: {integrity: sha512-WtaOIeCOkgz9y7dehKaKtEeKCvgUNh6fNcKCKmCNBbysmJA/oZJwM5q23gFLZfV+lQNkLNuTvgBlHr2QILmtAw==}
 
-  '@contentful/experiences-visual-editor-react@1.19.0':
-    resolution: {integrity: sha512-+aIjQllX0kxUNVU2+q2NdSH4MWA6svfsAtRzZj1t3w6BEFPrMHAV4YpGIlIRO+m0+jIlczlR61EC1qAOAH+nCg==}
+  '@contentful/experiences-visual-editor-react@1.20.0':
+    resolution: {integrity: sha512-niGmIIdX79wNfhimq01q+zzPAgstIn3/GuTmOqHc09gWObW119U1dlUSuhRkY7rjBfOxQf+NQ8eU+zRTFrlh3w==}
     peerDependencies:
       react: '>=17.0.0'
       react-dom: '>=17.0.0'
@@ -4021,6 +4021,12 @@ packages:
     peerDependencies:
       postcss: ^8.0.0
 
+  postcss-import@16.1.0:
+    resolution: {integrity: sha512-7hsAZ4xGXl4MW+OKEWCnF6T5jqBw80/EE9aXg1r2yyn1RsVEU8EtKXbijEODa+rg7iih4bKf7vlvTGYR4CnPNg==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      postcss: ^8.0.0
+
   postcss-js@4.0.1:
     resolution: {integrity: sha512-dDLF8pEO191hJMtlHFPRa8xsizHaM82MLfNkUHdUtVEV3tgTp5oj+8qbEqYM57SLfc74KSbw//4SeJma2LRVIw==}
     engines: {node: ^12 || ^14 || >= 16}
@@ -4788,11 +4794,11 @@ snapshots:
       '@vercel/stega': 0.1.2
       json-pointer: 0.6.2
 
-  '@contentful/experiences-components-react@1.19.0(contentful@10.15.1)(postcss@8.4.47)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@contentful/experiences-components-react@1.20.0(contentful@10.15.1)(postcss@8.4.47)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@contentful/experiences-core': 1.19.0(contentful@10.15.1)
+      '@contentful/experiences-core': 1.20.0(contentful@10.15.1)
       '@contentful/rich-text-react-renderer': 15.22.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      postcss-import: 15.1.0(postcss@8.4.47)
+      postcss-import: 16.1.0(postcss@8.4.47)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       style-inject: 0.3.0
@@ -4800,11 +4806,11 @@ snapshots:
       - contentful
       - postcss
 
-  '@contentful/experiences-components-react@1.19.0(contentful@11.0.3)(postcss@8.4.47)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@contentful/experiences-components-react@1.20.0(contentful@11.0.3)(postcss@8.4.47)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@contentful/experiences-core': 1.19.0(contentful@11.0.3)
+      '@contentful/experiences-core': 1.20.0(contentful@11.0.3)
       '@contentful/rich-text-react-renderer': 15.22.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      postcss-import: 15.1.0(postcss@8.4.47)
+      postcss-import: 16.1.0(postcss@8.4.47)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       style-inject: 0.3.0
@@ -4812,24 +4818,24 @@ snapshots:
       - contentful
       - postcss
 
-  '@contentful/experiences-core@1.19.0(contentful@10.15.1)':
+  '@contentful/experiences-core@1.20.0(contentful@10.15.1)':
     dependencies:
-      '@contentful/experiences-validators': 1.19.0
+      '@contentful/experiences-validators': 1.20.0
       '@contentful/rich-text-types': 16.8.5
       contentful: 10.15.1
 
-  '@contentful/experiences-core@1.19.0(contentful@11.0.3)':
+  '@contentful/experiences-core@1.20.0(contentful@11.0.3)':
     dependencies:
-      '@contentful/experiences-validators': 1.19.0
+      '@contentful/experiences-validators': 1.20.0
       '@contentful/rich-text-types': 16.8.5
       contentful: 11.0.3
 
-  '@contentful/experiences-sdk-react@1.19.0(@types/react-dom@18.3.0)(@types/react@18.3.8)(contentful@11.0.3)(postcss@8.4.47)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@5.4.7(@types/node@20.16.6)(sass@1.79.3))':
+  '@contentful/experiences-sdk-react@1.20.0(@types/react-dom@18.3.0)(@types/react@18.3.8)(contentful@11.0.3)(postcss@8.4.47)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@5.4.7(@types/node@20.16.6)(sass@1.79.3))':
     dependencies:
-      '@contentful/experiences-components-react': 1.19.0(contentful@11.0.3)(postcss@8.4.47)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@contentful/experiences-core': 1.19.0(contentful@11.0.3)
-      '@contentful/experiences-validators': 1.19.0
-      '@contentful/experiences-visual-editor-react': 1.19.0(@types/react-dom@18.3.0)(@types/react@18.3.8)(postcss@8.4.47)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@contentful/experiences-components-react': 1.20.0(contentful@11.0.3)(postcss@8.4.47)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@contentful/experiences-core': 1.20.0(contentful@11.0.3)
+      '@contentful/experiences-validators': 1.20.0
+      '@contentful/experiences-visual-editor-react': 1.20.0(@types/react-dom@18.3.0)(@types/react@18.3.8)(postcss@8.4.47)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@contentful/rich-text-types': 16.8.5
       classnames: 2.5.1
       contentful: 11.0.3
@@ -4849,14 +4855,14 @@ snapshots:
       - react-native
       - vite
 
-  '@contentful/experiences-validators@1.19.0':
+  '@contentful/experiences-validators@1.20.0':
     dependencies:
       zod: 3.23.8
 
-  '@contentful/experiences-visual-editor-react@1.19.0(@types/react-dom@18.3.0)(@types/react@18.3.8)(postcss@8.4.47)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@contentful/experiences-visual-editor-react@1.20.0(@types/react-dom@18.3.0)(@types/react@18.3.8)(postcss@8.4.47)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@contentful/experiences-components-react': 1.19.0(contentful@10.15.1)(postcss@8.4.47)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@contentful/experiences-core': 1.19.0(contentful@10.15.1)
+      '@contentful/experiences-components-react': 1.20.0(contentful@10.15.1)(postcss@8.4.47)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@contentful/experiences-core': 1.20.0(contentful@10.15.1)
       '@hello-pangea/dnd': 16.6.0(@types/react-dom@18.3.0)(@types/react@18.3.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       classnames: 2.5.1
       contentful: 10.15.1
@@ -9610,6 +9616,13 @@ snapshots:
   possible-typed-array-names@1.0.0: {}
 
   postcss-import@15.1.0(postcss@8.4.47):
+    dependencies:
+      postcss: 8.4.47
+      postcss-value-parser: 4.2.0
+      read-cache: 1.0.0
+      resolve: 1.22.8
+
+  postcss-import@16.1.0(postcss@8.4.47):
     dependencies:
       postcss: 8.4.47
       postcss-value-parser: 4.2.0
