@@ -18,5 +18,6 @@ export const ContainerDefinitaion: ComponentDefinition = {
     slot: {
       displayName: 'Slot'
     }
-  }
+  },
+  variables: {}
 }
