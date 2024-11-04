@@ -3,6 +3,7 @@
 import { CONTENTFUL_COMPONENTS, defineComponents, defineDesignTokens } from '@contentful/experiences-sdk-react'
 // components
 import { Button, buttonDefinition } from '@/components/btn'
+import Container, { ContainerDefinitaion } from '@/components/container'
 import {
   Accordion,
   AccordionDefinition,
@@ -28,7 +29,8 @@ const components = [
   { component: AccordionItem, definition: AccordionItemDefinition },
   { component: AccordionTrigger, definition: AccordionTriggerDefinition },
   { component: AccordionMain, definition: AccordionMainDefinition },
-  { component: AccordionItemTest, definition: AccordionItemTestDefinition }
+  { component: AccordionItemTest, definition: AccordionItemTestDefinition },
+  { component: Container, definition: ContainerDefinitaion }
 ]
 
 // Register components

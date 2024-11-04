@@ -8,7 +8,7 @@ import { ChevronDown } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const Accordion = (props: any) => (
-  <AccordionPrimitive.Root {...props} style={{ minHeight: '400px', minWidth: '100%' }}>
+  <AccordionPrimitive.Root {...props} style={{ minHeight: '400px', minWidth: '100%', backgroundColor: 'red' }}>
     {props.childrenSlot1}
   </AccordionPrimitive.Root>
 )

@@ -77,16 +77,17 @@ export const buttonDefinition: ComponentDefinition = {
       group: 'content'
     },
     variant: {
-      displayName: 'Variant',
+      displayName: 'Font-Family', //dropdown name
       type: 'Text',
-      defaultValue: 'primary',
+      defaultValue: 'font-roboto',
       group: 'style', // Possible values: style, content
       validations: {
+        //dropdown values
         in: [
-          { value: 'primary', displayName: 'Primary' },
-          { value: 'secondary', displayName: 'Secondary' },
-          { value: 'dark', displayName: 'Dark' },
-          { value: 'accent', displayName: 'Accent' }
+          { value: 'font-roboto', displayName: 'Roboto' },
+          { value: 'font-sans', displayName: 'Sans' },
+          { value: 'font-open-sans', displayName: 'Open Sans' },
+          { value: 'font-halvetica', displayName: 'Halvatica' }
         ]
       }
     },
