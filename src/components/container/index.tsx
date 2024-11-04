@@ -14,12 +14,9 @@ export const ContainerDefinitaion: ComponentDefinition = {
   category: 'Custom Component',
   builtInStyles: ['cfBackgroundColor'],
   children: true,
-  variables: {
-    // there are two types of variables, content variables and design variables
-    slots: {
-      slot: {
-        displayName: 'Slot'
-      }
+  slots: {
+    slot: {
+      displayName: 'Slot'
     }
   }
 }
