@@ -2,10 +2,11 @@ import { ComponentDefinition } from '@contentful/experiences-sdk-react'
 
 interface Props {
   slot: React.ReactNode
+  direction: 'row' | 'column'
 }
 
 export default function Container(props: Props) {
-  return <div style={{ width: '100vw', height: '200px' }}>{props.slot}</div>
+  return <div style={{ width: '100vw', height: '200px', display: 'flex', flexFlow: props.direction }}>{props.slot}</div>
 }
 
 export const ContainerDefinitaion: ComponentDefinition = {
@@ -19,5 +20,19 @@ export const ContainerDefinitaion: ComponentDefinition = {
       displayName: 'Slot'
     }
   },
-  variables: {}
+  variables: {
+    direction: {
+      displayName: 'Direction', //dropdown name
+      type: 'Text',
+      defaultValue: 'column',
+      group: 'style', // Possible values: style, content
+      validations: {
+        //dropdown values
+        in: [
+          { value: 'row', displayName: 'Row' },
+          { value: 'column', displayName: 'column' }
+        ]
+      }
+    }
+  }
 }
